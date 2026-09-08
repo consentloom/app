@@ -1,1 +1,16 @@
-{"slug": "consentloom", "title": "ConsentLoom", "description": "Explore what sharing can look like.", "attribution": "Consent exploration enabled by FinchNode."}
+{
+  "slug": "consentloom",
+  "title": "ConsentLoom",
+  "description": "Explore what sharing can look like.",
+  "attribution": "Consent exploration enabled by FinchNode.",
+  "categories": [
+    "demographics",
+    "medications",
+    "conditions",
+    "labs",
+    "vitals",
+    "allergies",
+    "immunizations",
+    "encounters"
+  ]
+}
