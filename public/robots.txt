@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://consentloom.onrender.com/sitemap.xml
+Sitemap: https://consentloom.com/sitemap.xml

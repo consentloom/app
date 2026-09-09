@@ -10,7 +10,7 @@
   "repositoryStatus": "public",
   "renderStatus": "live",
   "repository": "https://github.com/consentloom/app",
-  "liveUrl": "https://consentloom.onrender.com/",
+  "liveUrl": "https://consentloom.com/",
   "homepage": "individually designed full website",
   "importRoute": "/#/import",
   "subject": "Health data sharing scope & consent explorer",
@@ -40,11 +40,11 @@
     ],
     [
       "End a session or revoke sharing",
-      "Ending a browser session clears this site’s temporary access. Revocation is a separate action handled through the provider’s data controls. Because the consent application is shared, revoking it can affect other tools using the same application. Neither action can erase a personal file someone already downloaded. These distinctions help explain what each control can actually do."
+      "Ending a browser session clears this site\u2019s temporary access. Revocation is a separate action handled through the provider\u2019s data controls. Because the consent application is shared, revoking it can affect other tools using the same application. Neither action can erase a personal file someone already downloaded. These distinctions help explain what each control can actually do."
     ],
     [
       "Public explanations, private records",
-      "This guide is available without a connection. Its search covers only public help text and never reads a patient session. The private workflow requests records only after authorization and rechecks consent while open. ConsentLoom is a way to inspect the software’s sharing flow, not legal advice or a claim that every source offers identical coverage."
+      "This guide is available without a connection. Its search covers only public help text and never reads a patient session. The private workflow requests records only after authorization and rechecks consent while open. ConsentLoom is a way to inspect the software\u2019s sharing flow, not legal advice or a claim that every source offers identical coverage."
     ]
   ],
   "reference": [
