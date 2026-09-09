@@ -1,6 +1,6 @@
-# ConsentLoom
+# ConsentLoom — Health data sharing scope & consent explorer
 
-Explore what sharing can look like. Consent exploration enabled by FinchNode.
+Choose requested health record categories and inspect returned consent metadata with ConsentLoom. Understand session access, sharing scope and revocation.
 
 **Site:** https://consentloom.onrender.com/  
 **Repository:** https://github.com/consentloom/app
@@ -52,3 +52,22 @@ A real patient must perform their own EHR authentication and consent; these test
 ## Domain candidate
 
 `consentloom.com` was available on September 8, 2026; Porkbun displayed $11.08 for initial registration and renewal. No domain was purchased. Availability and price can change. Add it to Render and the backend's explicit origin allowlist before use.
+
+<!-- public-discovery -->
+## Public guide and project context
+
+[From category selection to a consent receipt](https://consentloom.onrender.com/guides/from-category-selection-to-consent.html) — What each step of the sharing flow means, and why ending a browser session is different from revoking access.
+
+[Search ConsentLoom guides](https://consentloom.onrender.com/guides/) · [About the site](https://consentloom.onrender.com/about.html) · [Sitemap](https://consentloom.onrender.com/sitemap.xml)
+
+ConsentLoom is a standalone product with its own interface, documentation and repository, prepared for independent business operation and continued development. Its FinchNode integration is documented in the code. Live production activation remains pending.
+
+## Public-page build and discoverability
+
+Edit `content/seo.json` for reviewed article text and site metadata. `npm run build` generates public HTML pages, a sitemap, social metadata and structured data, then prerenders the actual React homepage. `npm run test:seo` checks the built crawl surface after a build. Public guide search filters only public text in the browser; no patient data or search analytics enter the index.
+
+Keep canonical URLs on the deployed origin until a custom domain is registered and configured. Add only public, canonical pages to the sitemap. Validate links, mobile layout and the built HTML after editorial changes. Search engine indexing and rich results are not guaranteed.
+
+## Independent business handoff
+
+[Business handoff](HANDOFF.md) covers product identity, the receiving business’s production setup, domain migration, search verification and ongoing editorial maintenance.

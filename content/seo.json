@@ -1,0 +1,54 @@
+{
+  "slug": "consentloom",
+  "title": "ConsentLoom",
+  "description": "Choose requested health record categories and inspect returned consent metadata with ConsentLoom. Understand session access, sharing scope and revocation.",
+  "attribution": "Consent exploration enabled by FinchNode.",
+  "domain": "consentloom.com",
+  "purpose": "Consent scope and receipt explorer",
+  "theme": "Violet selection and receipt workspace",
+  "workflow": "Choose a real import scope and inspect live consent metadata after authorization.",
+  "repositoryStatus": "public",
+  "renderStatus": "live",
+  "repository": "https://github.com/consentloom/app",
+  "liveUrl": "https://consentloom.onrender.com/",
+  "homepage": "individually designed full website",
+  "importRoute": "/#/import",
+  "subject": "Health data sharing scope & consent explorer",
+  "color": "#624494",
+  "paper": "#f6f1ff",
+  "label": "Permission, explained",
+  "article": "from-category-selection-to-consent",
+  "headline": "From category selection to a consent receipt",
+  "summary": "What each step of the sharing flow means, and why ending a browser session is different from revoking access.",
+  "topics": [
+    "patient-consent",
+    "data-sharing",
+    "privacy"
+  ],
+  "sections": [
+    [
+      "Selecting is the beginning",
+      "ConsentLoom lets a visitor choose among the categories the site can request. That selection defines a request; it does not itself authorize access to a healthcare organization. The next step opens a hosted flow where the visitor completes source sign-in and sharing choices. Until authorization succeeds, the interface has no clinical record to display."
+    ],
+    [
+      "The hosted handoff",
+      "We use FinchNode Hosted Connect as the authorization boundary in the implemented flow. Our server creates a connection session for the selected categories and the browser follows the returned link. The production credential stays on the server. The consent application shown during authorization is documented in the privacy notice."
+    ],
+    [
+      "Read the returned metadata",
+      "ConsentLoom displays actual metadata returned for the authorized session. Requested categories and granted access are not interchangeable concepts, and an unfinished flow is not a completed receipt. The viewer does not fabricate approvals to make the interface look populated. Live activation is pending; a configuration message is the expected boundary until production setup is complete."
+    ],
+    [
+      "End a session or revoke sharing",
+      "Ending a browser session clears this site’s temporary access. Revocation is a separate action handled through the provider’s data controls. Because the consent application is shared, revoking it can affect other tools using the same application. Neither action can erase a personal file someone already downloaded. These distinctions help explain what each control can actually do."
+    ],
+    [
+      "Public explanations, private records",
+      "This guide is available without a connection. Its search covers only public help text and never reads a patient session. The private workflow requests records only after authorization and rechecks consent while open. ConsentLoom is a way to inspect the software’s sharing flow, not legal advice or a claim that every source offers identical coverage."
+    ]
+  ],
+  "reference": [
+    "FinchNode consent and deletion controls",
+    "https://finchnode.com/me"
+  ]
+}
