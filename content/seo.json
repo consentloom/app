@@ -40,16 +40,127 @@
     ],
     [
       "End a session or revoke sharing",
-      "Ending a browser session clears this site\u2019s temporary access. Revocation is a separate action handled through the provider\u2019s data controls. Because the consent application is shared, revoking it can affect other tools using the same application. Neither action can erase a personal file someone already downloaded. These distinctions help explain what each control can actually do."
+      "Ending a browser session clears this site’s temporary access. Revocation is a separate action handled through the provider’s data controls. Because the consent application is shared, revoking it can affect other tools using the same application. Neither action can erase a personal file someone already downloaded. These distinctions help explain what each control can actually do."
     ],
     [
       "Public explanations, private records",
-      "This guide is available without a connection. Its search covers only public help text and never reads a patient session. The private workflow requests records only after authorization and rechecks consent while open. ConsentLoom is a way to inspect the software\u2019s sharing flow, not legal advice or a claim that every source offers identical coverage."
+      "This guide is available without a connection. Its search covers only public help text and never reads a patient session. The private workflow requests records only after authorization and rechecks consent while open. ConsentLoom is a way to inspect the software’s sharing flow, not legal advice or a claim that every source offers identical coverage."
     ]
   ],
   "reference": [
     "FinchNode consent and deletion controls",
     "https://finchnode.com/me"
   ],
-  "googleVerification": "TMdY5YFKPrSoVv3fC5iyCopvPVAm9JPLyi2OVYoBrOk"
+  "googleVerification": "TMdY5YFKPrSoVv3fC5iyCopvPVAm9JPLyi2OVYoBrOk",
+  "guideIntro": "Understand category selection, returned consent receipts, session closure and sharing revocation through the controls implemented in ConsentLoom.",
+  "finchnodeContext": "ConsentLoom makes the FinchNode consent response inspectable: selected categories, returned receipts and expiry information are shown as distinct parts of the connection. The interface explains the difference between ending local access and revoking the registered application’s sharing permission.",
+  "articles": [
+    {
+      "slug": "end-session-or-revoke-health-data-sharing",
+      "title": "Ending a session vs revoking health-data sharing",
+      "description": "Learn which ConsentLoom controls end local access, manage the authorized connection, or start a new request with different categories.",
+      "published": "2026-09-09",
+      "sections": [
+        {
+          "heading": "Ending the local session",
+          "paragraphs": [
+            "A local session gives this browser temporary access to records through the application’s server. Ending it invalidates that local access. The existence of a consent receipt is a separate matter: closing the workspace does not itself revoke an already completed authorization."
+          ]
+        },
+        {
+          "heading": "Managing the authorized sharing",
+          "paragraphs": [
+            "The workspace links to the connection provider’s sharing controls. Use those controls when you intend to manage or revoke the registered application’s permission. Read the application identity and purpose carefully, because the current deployment uses a shared registered connection application."
+          ]
+        },
+        {
+          "heading": "Changing the requested categories",
+          "paragraphs": [
+            "ConsentLoom’s implemented flow asks you to end the current session and reconnect with a new category choice. A new selection is a request that still needs authorization. Changing a checkbox is not, by itself, a modification of an existing receipt."
+          ],
+          "items": [
+            "To stop using this local workspace, end the session.",
+            "To manage the registered application’s sharing permission, use the sharing controls.",
+            "To request a different scope, reconnect with the intended categories and review the authorization."
+          ]
+        },
+        {
+          "heading": "Remember copies made outside the session",
+          "paragraphs": [
+            "Revocation affects authorized access. It does not automatically retrieve a file already downloaded or a copy shared elsewhere. Read the privacy notice for the implementation’s retention and copy-handling details. The connection workflow still requires production activation before live use."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does closing a tab revoke the receipt?",
+          "answer": "No. Local access and the authorized sharing receipt are different controls."
+        },
+        {
+          "question": "Does revocation apply only to the page I am viewing?",
+          "answer": "It applies to the registered application’s authorization. The current connection application is shared, so check its stated purpose and identity."
+        }
+      ],
+      "references": [
+        {
+          "label": "ConsentLoom interface implementation",
+          "url": "https://github.com/consentloom/app/blob/main/app/view.tsx"
+        }
+      ]
+    },
+    {
+      "slug": "read-a-consent-receipt",
+      "title": "How to read a consent receipt in ConsentLoom",
+      "description": "Inspect authorized categories, returned record counts, source receipts and expiry metadata without confusing a request with a completed authorization.",
+      "published": "2026-09-09",
+      "sections": [
+        {
+          "heading": "Compare the request with the returned scope",
+          "paragraphs": [
+            "The categories you selected before connecting describe what you requested. The workspace uses the returned categories and consent metadata after authorization. When checking a connection, read the actual response rather than relying only on the earlier checkbox state."
+          ]
+        },
+        {
+          "heading": "Separate permission from record count",
+          "paragraphs": [
+            "A category card shows how many records were returned for that category. Zero entries does not, on its own, explain whether the source lacked data, returned an empty category, or could not supply the expected information. A permission to request a category is not a promise of a populated response."
+          ]
+        },
+        {
+          "heading": "Read the receipt fields literally",
+          "paragraphs": [
+            "Where receipts are returned, the interface displays their category list, source and expiry. The main consent panel also shows the returned status. Expand “Inspect consent metadata” to see the object behind those labels. An omitted field should not be replaced by an assumed duration or source."
+          ]
+        },
+        {
+          "heading": "Tie future independent operation to a real registration",
+          "paragraphs": [
+            "When a business takes over ConsentLoom, its registered application purpose, allowed categories, server credentials and privacy disclosures should describe that actual operation. A new corporate owner’s name should not merely be inserted into an old consent explanation while the connection configuration remains unchanged."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Is a selected category already authorized?",
+          "answer": "No. Selection happens before authorization; the returned consent response is what the workspace can inspect."
+        },
+        {
+          "question": "Does a zero count prove the category was denied?",
+          "answer": "No. The count and the permission answer different questions. Inspect the returned consent and source metadata."
+        }
+      ],
+      "finchnode": {
+        "heading": "Why the receipt points back to FinchNode",
+        "text": "ConsentLoom displays consent metadata from the FinchNode connection and provides a direct route to its sharing-management page. Keeping that route visible helps a visitor identify where the registered permission is managed, beyond the temporary local session.",
+        "label": "Manage authorized sharing with FinchNode",
+        "url": "https://finchnode.com/me"
+      },
+      "references": [
+        {
+          "label": "ConsentLoom interface implementation",
+          "url": "https://github.com/consentloom/app/blob/main/app/view.tsx"
+        }
+      ]
+    }
+  ]
 }

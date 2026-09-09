@@ -71,3 +71,10 @@ Keep canonical URLs on the custom domain configured in `content/seo.json`. Add o
 ## Independent business handoff
 
 [Business handoff](HANDOFF.md) covers product identity, the receiving business’s production setup, domain migration, search verification and ongoing editorial maintenance.
+
+## More product guides
+
+Understand category selection, returned consent receipts, session closure and sharing revocation through the controls implemented in ConsentLoom.
+
+- [Ending a session vs revoking health-data sharing](https://consentloom.com/guides/end-session-or-revoke-health-data-sharing.html) — Learn which ConsentLoom controls end local access, manage the authorized connection, or start a new request with different categories.
+- [How to read a consent receipt in ConsentLoom](https://consentloom.com/guides/read-a-consent-receipt.html) — Inspect authorized categories, returned record counts, source receipts and expiry metadata without confusing a request with a completed authorization.
