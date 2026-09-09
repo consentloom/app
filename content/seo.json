@@ -161,6 +161,91 @@
           "url": "https://github.com/consentloom/app/blob/main/app/view.tsx"
         }
       ]
+    },
+    {
+      "slug": "test-consent-before-launching-a-health-app",
+      "title": "How to test consent behavior before launching a health app",
+      "description": "ConsentLoom explains how to test category requests, granted access, expiry and revocation as observable product behavior before an independent deployment.",
+      "published": "2026-09-09",
+      "theme": "consent-testing",
+      "sections": [
+        {
+          "heading": "Turn permission language into observable behavior",
+          "paragraphs": [
+            "A consent screen is only one part of the access story. A product also needs to show what it asks for, what was actually authorized, what it retrieves and what happens when that access ends. ConsentLoom exists to make parts of that returned permission state inspectable.",
+            "For a startup preparing an independent deployment, the useful question is whether the implemented behavior matches the stated purpose. A reassuring paragraph cannot substitute for a server that applies the correct scope."
+          ]
+        },
+        {
+          "heading": "Test the difference between requested and granted categories",
+          "paragraphs": [
+            "The current server accepts only categories allowed for the specific site. Later it intersects the stored request with the completed connection’s categories and granted categories before reading records. That is a concrete boundary a test can exercise.",
+            "Include a request for an unsupported category and a completed connection with only part of the original scope. Verify that a response containing an out-of-scope category is rejected. The product should not broaden access because a browser sends a different list."
+          ],
+          "links": [
+            {
+              "label": "Scope checks in the connection service",
+              "url": "https://github.com/visitquill/finchapps-connect/blob/main/server.mjs"
+            },
+            {
+              "label": "Injected backend security tests",
+              "url": "https://github.com/visitquill/finchapps-connect/blob/main/test/security.test.mjs"
+            }
+          ]
+        },
+        {
+          "heading": "Use FinchNode’s returned consent as evidence",
+          "paragraphs": [
+            "ConsentLoom uses the consent metadata returned through the FinchNode connection. Its interface displays categories, receipts and expiry fields when they are present and links to the sharing controls. The product can then explain the difference between requesting access and inspecting the result of authorization.",
+            "The current deployment uses a shared registered connection application. A receiving corporation should align its own application registration, purpose and configuration before treating the permission as exclusive to its independent service."
+          ],
+          "links": [
+            {
+              "label": "ConsentLoom receipt display",
+              "url": "https://github.com/consentloom/app/blob/main/app/view.tsx"
+            },
+            {
+              "label": "FinchNode sharing management",
+              "url": "https://finchnode.com/me"
+            }
+          ]
+        },
+        {
+          "heading": "Exercise ended access as carefully as the happy path",
+          "paragraphs": [
+            "The server keeps temporary sessions in memory and checks the current consent response on reads. Signed lifecycle events can invalidate matching sessions. An implementation test should also account for access ending while a read is in flight."
+          ],
+          "items": [
+            "Reject an invalid webhook signature.",
+            "Treat expired consent as ended access.",
+            "Prevent another site origin from reusing the session.",
+            "Confirm that local session closure is not described as revoking an already completed receipt."
+          ]
+        },
+        {
+          "heading": "Separate software tests from a live launch claim",
+          "paragraphs": [
+            "Injected tests can exercise branches without disclosing patient records, but they do not prove a real organization’s authorization path works. The current application remains pending production activation. Before launch, the operator needs to complete the approved live configuration and verify the actual user journey.",
+            "That distinction helps ConsentLoom communicate a concrete integration rather than an unsupported assurance. The value of the FinchNode connection is clearest when the product shows what was authorized and what its own server will do with that permission."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Do mocked tests prove a live patient connection is active?",
+          "answer": "No. They test the implementation against controlled responses. Live authorization needs its own properly configured and authorized verification."
+        },
+        {
+          "question": "Can a new business keep the old registered purpose unchanged?",
+          "answer": "Its registration and disclosures should match its actual operation. A change in ownership alone does not update the technical connection or authorized purpose."
+        }
+      ],
+      "references": [
+        {
+          "label": "ConsentLoom public source repository",
+          "url": "https://github.com/consentloom/app"
+        }
+      ]
     }
   ]
 }

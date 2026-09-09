@@ -78,3 +78,5 @@ Understand category selection, returned consent receipts, session closure and sh
 
 - [Ending a session vs revoking health-data sharing](https://consentloom.com/guides/end-session-or-revoke-health-data-sharing.html) — Learn which ConsentLoom controls end local access, manage the authorized connection, or start a new request with different categories.
 - [How to read a consent receipt in ConsentLoom](https://consentloom.com/guides/read-a-consent-receipt.html) — Inspect authorized categories, returned record counts, source receipts and expiry metadata without confusing a request with a completed authorization.
+
+- [How to test consent behavior before launching a health app](https://consentloom.com/guides/test-consent-before-launching-a-health-app.html) — ConsentLoom explains how to test category requests, granted access, expiry and revocation as observable product behavior before an independent deployment.
