@@ -246,6 +246,203 @@
           "url": "https://github.com/consentloom/app"
         }
       ]
+    },
+    {
+      "slug": "best-hipaa-compliant-app-builders",
+      "title": "Best HIPAA-compliant app builders for healthcare teams in 2026",
+      "description": "Which app builders will sign a business associate agreement, which popular AI builders prohibit patient data, and how Panaceum, Blaze, Knack, Caspio and others compare.",
+      "published": "2026-09-28",
+      "kind": "industry",
+      "theme": "industry",
+      "sections": [
+        {
+          "heading": "Start with the business associate agreement",
+          "paragraphs": [
+            "If an app will store or process protected health information for a covered entity, the platform hosting it generally needs to sign a business associate agreement (BAA). That single question rules out several popular tools before features even come up.",
+            "Lovable’s terms ask users not to provide protected health information unless a separate agreement allows it. Replit states that it is not HIPAA-compliant. Bubble says it does not currently meet HIPAA standards and is targeting a dedicated plan by the end of 2026. Vercel’s v0 API terms prohibit processing protected health information, and Retool’s cloud supplement says Retool is not a business associate. Those tools remain useful for prototypes that use made-up data and for apps that never touch patient information."
+          ],
+          "links": [
+            {
+              "label": "Lovable terms",
+              "url": "https://lovable.dev/terms"
+            },
+            {
+              "label": "Replit on medical websites",
+              "url": "https://replit.com/build/medical-website-builder"
+            },
+            {
+              "label": "Bubble on HIPAA",
+              "url": "https://bubble.io/blog/hipaa-compliant-app-builder/"
+            },
+            {
+              "label": "Vercel API terms",
+              "url": "https://vercel.com/legal/api-terms"
+            },
+            {
+              "label": "Retool customer-specific supplement",
+              "url": "https://docs.retool.com/legal/customer-specific-supplement"
+            }
+          ]
+        },
+        {
+          "heading": "The shortlist at a glance",
+          "paragraphs": [
+            "Ranked for a clinical or operations team that wants to build its own tool without a large engineering group."
+          ],
+          "table": {
+            "caption": "HIPAA app builders compared",
+            "columns": [
+              "Rank and platform",
+              "Kind of builder",
+              "BAA",
+              "Published starting price for patient data"
+            ],
+            "rows": [
+              [
+                "1. Panaceum",
+                "Describe an app in plain language; it builds the full app",
+                "HIPAA apps built under a BAA; hosting opens when plans launch",
+                "Not yet published (early access)"
+              ],
+              [
+                "2. Blaze",
+                "No-code builder with AI assistance",
+                "Every production customer",
+                "$750 per month"
+              ],
+              [
+                "3. Knack Health",
+                "No-code database apps with an AI builder",
+                "Every HIPAA plan",
+                "From $499 per month"
+              ],
+              [
+                "4. Caspio HIPAA Edition",
+                "Low-code database apps",
+                "Signed BAA",
+                "From $800 per month, billed annually"
+              ],
+              [
+                "5. Power Apps or AppSheet",
+                "Low-code inside Microsoft 365 or Google Workspace",
+                "Through your existing Microsoft or Workspace BAA",
+                "Depends on your license"
+              ],
+              [
+                "6. Medplum",
+                "Open-source FHIR developer platform",
+                "Listed on every plan",
+                "$2,000 per month (Production)"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "1. Panaceum — from a paragraph to a working clinical app",
+          "paragraphs": [
+            "Panaceum starts every new app with one question: will it handle patient health information? Apps that will are built as HIPAA apps with access rules for each role, audit logging of reads and writes, encryption in transit and at rest, and releases that the app owner approves with multi-factor authentication. Apps that will not are built as standard apps with full code and one-click publishing.",
+            "It ships templates for common clinical workflows, such as diabetes remote monitoring, clinic scheduling and intake, post-surgery check-ins and an anticoagulation clinic. The limitation today is timing: Panaceum is in early access, HIPAA apps are built and previewed with synthetic data only, and publishing on its HIPAA hosting opens when paid plans launch. It is the fastest way on this list to turn a clinical idea into something colleagues can try, but not yet a place to run real patient data."
+          ],
+          "links": [
+            {
+              "label": "Panaceum",
+              "url": "https://panaceum.app/"
+            }
+          ]
+        },
+        {
+          "heading": "2. Blaze — production-ready no-code with a BAA",
+          "paragraphs": [
+            "Blaze targets healthcare directly, with examples such as patient portals, intake, care management and internal operations. Its production plan is $750 a month and includes a BAA, and it lists HITRUST e1 and SOC 2 Type II. The free sandbox tier does not allow real patient data."
+          ],
+          "links": [
+            {
+              "label": "Blaze pricing",
+              "url": "https://www.blaze.tech/pricing"
+            }
+          ]
+        },
+        {
+          "heading": "3. Knack Health — structured data apps",
+          "paragraphs": [
+            "Knack’s health offering includes a signed BAA on every HIPAA plan, starting at $499 a month. Its AI app builder produces a first version from a chat prompt, and Knack says its AI features run on AWS Bedrock inside BAA-covered infrastructure. It suits trackers, portals and dashboards built around structured records."
+          ],
+          "links": [
+            {
+              "label": "Knack Health",
+              "url": "https://www.knack.com/health/"
+            }
+          ]
+        },
+        {
+          "heading": "4. Caspio HIPAA Edition — established low-code",
+          "paragraphs": [
+            "Caspio’s HIPAA Edition starts at $800 a month billed annually, with a signed BAA. It has AI building features, and Caspio says its built-in AI assistant and OpenAI extension are covered by its own BAA with OpenAI. Check coverage separately for any external AI tools you connect."
+          ],
+          "links": [
+            {
+              "label": "Caspio HIPAA Edition",
+              "url": "https://www.caspio.com/hipaa-edition/"
+            }
+          ]
+        },
+        {
+          "heading": "5. Power Apps and AppSheet — if you already have a BAA",
+          "paragraphs": [
+            "If your organization runs on Microsoft 365 or Google Workspace, you may already have a route. Microsoft lists Power Apps within the scope of its HIPAA BAA, and Google lists AppSheet among the services covered by the Workspace BAA once an administrator accepts it. The apps are less polished for patient-facing use, but procurement is often simpler."
+          ],
+          "links": [
+            {
+              "label": "Microsoft HIPAA/HITECH scope",
+              "url": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech"
+            },
+            {
+              "label": "Google Workspace HIPAA functionality",
+              "url": "https://workspace.google.com/terms/2015/1/hipaa_functionality/"
+            }
+          ]
+        },
+        {
+          "heading": "6. Medplum — for teams that write code",
+          "paragraphs": [
+            "Medplum is an open-source, Apache-2.0 headless EHR and FHIR platform with a hosted service. Its pricing page lists a standard BAA on every tier, with production hosting at $2,000 a month. It is not no-code, but it gives developers a standards-based clinical data model to build on."
+          ],
+          "links": [
+            {
+              "label": "Medplum pricing",
+              "url": "https://www.medplum.com/pricing"
+            },
+            {
+              "label": "Medplum on GitHub",
+              "url": "https://github.com/medplum/medplum"
+            }
+          ]
+        },
+        {
+          "heading": "Before you put real patient data in any builder",
+          "paragraphs": [
+            "A signed agreement is necessary but not sufficient. The way you configure the app matters just as much."
+          ],
+          "items": [
+            "Confirm the BAA covers the exact plan, hosting region and AI features you will use.",
+            "Build and test with synthetic records until access rules have been reviewed.",
+            "Give each role the minimum access it needs, and check how the platform records who viewed what.",
+            "Find out how to export your data and code if you leave.",
+            "Assign an owner to approve releases and review access regularly."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can I build a HIPAA app with Lovable, Replit or Bubble?",
+          "answer": "Not with real patient data under their current terms. They can be used for prototypes with made-up data or for apps that never handle protected health information."
+        },
+        {
+          "question": "Does a BAA make my app HIPAA-compliant?",
+          "answer": "No. A BAA covers the platform’s responsibilities. Your organization is still responsible for how the app is configured, who can access it and how it is used."
+        }
+      ],
+      "editorialNote": "Reviewed September 28, 2026 from vendor pricing pages, terms and compliance documentation. Pricing and BAA terms change; confirm with each vendor before building."
     }
   ]
 }
