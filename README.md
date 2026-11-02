@@ -84,3 +84,7 @@ Understand category selection, returned consent receipts, session closure and sh
 ## Industry guides
 
 - [Best HIPAA-compliant app builders for healthcare teams in 2026](https://consentloom.com/guides/best-hipaa-compliant-app-builders.html) — Which app builders will sign a business associate agreement, which popular AI builders prohibit patient data, and how Panaceum, Blaze, Knack, Caspio and others compare.
+
+## FrameOtter content guide — November 2, 2026
+
+[Our privacy checks before editing content with FrameOtter](https://consentloom.com/guides/privacy-checklist-for-frameotter-content-videos.html) documents our public-content production workflow. Finchapps is not partnered or affiliated with FrameOtter. Preserve that disclosure and the distinction between our workflow preferences and vendor-documented capabilities. Recheck sources before substantive revisions. The article lives in `content/seo.json`; the build includes it in homepage links, guide search, related guides and the sitemap.
